@@ -2016,6 +2016,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/blog/2024/08/19/ci-workflow-for-EESSI/</loc>
+         <lastmod>2024-08-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/filesystem_layer/stratum1/</loc>
          <lastmod>2024-08-19</lastmod>
          <changefreq>daily</changefreq>

@@ -1928,6 +1928,9 @@
 </code></pre></div>
 <p>Note how we simply include the EESSI GitLab CI component and set up a blank directory for our user R libraries. Apart from the <a href="https://cran.r-project.org/package=rnaturalearthdata"><code>rnaturalearthdata</code></a> R package, all the other dependencies are taken care of by the <code>R-bundle-CRAN/2023.12-foss-2023a</code> EESSI module. This is true for the system and R package dependencies.</p>
 <p>Then we simply have to install our package to the CI environment and call the <code>multixscale_map()</code> function to produce the plot, which is uploaded as an artifact from the CI environment. We can then retrieve the <a href="https://gitlab.com/neves-p/eessirmaps/-/jobs/8057216299/artifacts/download">artifact archive</a>, unpack it and obtain the map.</p>
+<figure>
+<img alt="MultiXscale CoE country map" src="../../msx_map.png" />
+</figure>
 
 
 

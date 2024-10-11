@@ -1877,7 +1877,7 @@
                           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 20a8 8 0 0 0 8-8 8 8 0 0 0-8-8 8 8 0 0 0-8 8 8 8 0 0 0 8 8m0-18a10 10 0 0 1 10 10 10 10 0 0 1-10 10C6.47 22 2 17.5 2 12A10 10 0 0 1 12 2m.5 5v5.25l4.5 2.67-.75 1.23L11 13V7z"/></svg>
                           <span class="md-ellipsis">
                             
-                              2 min read
+                              3 min read
                             
                           </span>
                         </div>
@@ -1901,7 +1901,7 @@
 
 
 <h1 id="ci-workflow-for-eessi">CI workflow for EESSI<a class="headerlink" href="#ci-workflow-for-eessi" title="Permanent link">&para;</a></h1>
-<p><a href="https://www.eessi.io/docs/using_eessi/eessi_in_ci/">EESSI's CI workflows</a> are available on <a href="https://github.com/marketplace/actions/eessi">GitHub Actions</a> and as a <a href="https://gitlab.com/explore/catalog/eessi/gitlab-eessi">GitLab CI/CD component</a>. Enabling this is as simple as adding EESSI's CI to your workflow of choice, giving you access to the entire EESSI software stack optimized for the relevant CPU architecture(s) in your runner's environment. This can be very useful, for example, if you are developing an application on top of the EESSI software stack and want to keep set-up to a minimum so you can focus on your code. With the EESSI CI workflows you don't have to worry about figuring out how to optimize build and runtime dependencies as these will be streamed seamlessly to your runner's environment.</p>
+<p><a href="https://www.eessi.io/docs/using_eessi/eessi_in_ci/">EESSI's CI workflows</a> are available on <a href="https://github.com/marketplace/actions/eessi">GitHub Actions</a> and as a <a href="https://gitlab.com/explore/catalog/eessi/gitlab-eessi">GitLab CI/CD component</a>. Enabling this is as simple as adding EESSI's CI to your workflow of choice, giving you access to the entire EESSI software stack optimized for the relevant CPU architecture(s) in your runner's environment. If you are developing an application on top of the EESSI software stack, for example, this means you don't need to invest heavily in configuring and maintaining a CI setup: EESSI does that for you so you can focus on your code. With the EESSI CI workflows you don't have to worry ab to worry about figuring out how to optimize build and runtime dependencies as these will be streamed seamlessly to your runner's environment.</p>
 <!-- more -->
 
 <h2 id="using-the-ci-component-in-gitlab">Using the CI component in GitLab<a class="headerlink" href="#using-the-ci-component-in-gitlab" title="Permanent link">&para;</a></h2>
@@ -1926,7 +1926,7 @@
 <a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      remotes::install_gitlab(&#39;neves-p/eessirmaps&#39;, upgrade = FALSE);
 <a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>      eessirmaps::multixscale_map(); ggplot2::ggsave(&#39;msx_map.png&#39;, bg = &#39;white&#39;)&quot;
 </code></pre></div>
-<p>Note how we simply include the EESSI GitLab CI component and set up a blank directory for our user R libraries. Apart from the <a href="https://cran.r-project.org/package=rnaturalearthdata"><code>rnaturalearthdata</code></a> R package, all the other dependencies are taken care of by the <code>R-bundle-CRAN/2023.12-foss-2023a</code> EESSI module. This is true for the system and R package dependencies.</p>
+<p>Note how we simply include the EESSI GitLab CI component and set up a blank directory for our user R libraries. Remember, because of EESSI, the environment that you develop in will be <em>exactly</em> the same as the one the CI is run in. Apart from the <a href="https://cran.r-project.org/package=rnaturalearthdata"><code>rnaturalearthdata</code></a> R package, all the other dependencies are taken care of by the <code>R-bundle-CRAN/2023.12-foss-2023a</code> EESSI module. This is true for the system and R package dependencies.</p>
 <p>Then we simply have to install our package to the CI environment and call the <code>multixscale_map()</code> function to produce the plot, which is uploaded as an artifact from the CI environment. We can then retrieve the <a href="https://gitlab.com/neves-p/eessirmaps/-/jobs/8057216299/artifacts/download">artifact archive</a>, unpack it and obtain the map.</p>
 <figure>
 <img alt="MultiXscale CoE country map" src="../../msx_map.png" />
@@ -1951,7 +1951,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 10, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">October 11, 2024</span>
   </span>
 
     

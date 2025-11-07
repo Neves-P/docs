@@ -60,7 +60,7 @@ jobs:
     permissions:
       id-token: write
       pages: write
-      content: read
+      contents: read
     runs-on: ubuntu-latest
     steps:
       - uses: actions/configure-pages@v5

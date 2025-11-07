@@ -49,11 +49,11 @@ jobs:
         # Use the latest release by default
         git checkout $LATEST_VERSION
         git branch
-    - name: install mkdocs + plugins
+    - name: install zensical + plugins
       run: |
           pip install -r requirements.txt
-          pip list | grep mkdocs
-          mkdocs --version
+          pip list | grep zensical
+          zensical --version
 
     - name: build tutorial
       run: make test

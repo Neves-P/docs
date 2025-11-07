@@ -1,8 +1,8 @@
 # documentation: https://help.github.com/en/articles/workflow-syntax-for-github-actions
-name: deploy documentation (only on push to main branch)
+name: deploy documentation (only on push to main, zensical branch)
 on:
   push:
-    branches: main
+    branches: main, zensical
   # Add option to deploy manually, e.g. because there is a new EESSI test suite release and we want updated API docs
   workflow_dispatch:
 # Declare default permissions as read only.
@@ -24,11 +24,11 @@ jobs:
       with:
         python-version: '3.10'
 
-    - name: install mkdocs + plugins
+    - name: install zensical + plugins
       run: |
           pip install -r requirements.txt
-          pip list | grep mkdocs
-          mkdocs --version
+          pip list | grep zensical
+          zensical --version
 
     # Make sure to also deploy auto-generated API docs for test suite
     # For that, we need the repo to be available under eessi/test-suite

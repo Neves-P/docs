@@ -10,5 +10,4 @@ mkdocstrings[python]
 mkdocs-gen-files
 mkdocs-literate-nav
 mkdocs-section-index
-tomli # For Python < 3.11
 zensical

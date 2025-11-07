@@ -53,12 +53,24 @@ jobs:
         LATEST_VERSION=$(git tag | grep '^v[0-9]\+\.[0-9]\+\.[0-9]\+$' | sort -t. -k 1,1n -k 2,2n -k 3,3n | tail -1)
         # Use the latest release by default
         git checkout $LATEST_VERSION
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/configure-pages@v5
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v5
+        with:
+          python-version: 3.x
+      - run: pip install zensical
+      - run: zensical build --clean 
 
-    - name: build tutorial
-      run: make test
-    - name: Deploy pages
-      uses: actions/upload-pages-artifact@v4
-      with:
-        path: site
-    - uses: actions/deploy-pages@v4
+
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - uses: actions/deploy-pages@v4
+
 

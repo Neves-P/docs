@@ -321,6 +321,10 @@
          <lastmod>2025-11-07</lastmod>
     </url>
     <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/ESMF/</loc>
+         <lastmod>2025-11-07</lastmod>
+    </url>
+    <url>
          <loc>https://eessi.github.io/docs/available_software/detail/ESPResSo/</loc>
          <lastmod>2025-11-07</lastmod>
     </url>
@@ -2086,6 +2090,10 @@
     </url>
     <url>
          <loc>https://eessi.github.io/docs/available_software/detail/ncdu/</loc>
+         <lastmod>2025-11-07</lastmod>
+    </url>
+    <url>
+         <loc>https://eessi.github.io/docs/available_software/detail/netCDF-C%2B%2B4/</loc>
          <lastmod>2025-11-07</lastmod>
     </url>
     <url>

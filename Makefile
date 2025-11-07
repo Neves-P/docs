@@ -1,13 +1,13 @@
 all: build
 
 build:
-	mkdocs build
+	zensical build
 
 deploy:
-	mkdocs gh-deploy --force
+	zensical gh-deploy --force
 
 test:
-	mkdocs build --strict
+	zensical build --strict
 
 preview:
-	mkdocs serve
+	zensical serve

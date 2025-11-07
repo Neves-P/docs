@@ -51,4 +51,10 @@ jobs:
         git checkout $LATEST_VERSION
 
     - name: build tutorial
-      run: make test && make deploy
+      run: make test
+    - name: Deploy pages
+      uses: actions/upload-pages-artifact@v4
+      with:
+        path: site
+    - uses: actions/deploy-pages@v4
+

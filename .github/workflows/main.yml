@@ -1,15 +1,16 @@
 on:
   schedule:
-    - cron: 0 0 1 * * # run monthly
+    - cron: '0 0 * * 0'
   workflow_dispatch:
-  # push:
-  # ...
 
-name: Broken Link Check
+name: Check markdown links
 jobs:
-  check:
-    name: Broken Link Check
+  my-broken-link-checker:
+    name: Check broken links
     runs-on: ubuntu-latest
     steps:
-      - name: Broken Link Check
-        uses: technote-space/broken-link-checker-action@v2
+      - name: Check for broken links
+        uses: ruzickap/action-my-broken-link-checker@v3
+        with:
+          url: https://www.mkdocs.org
+          cmd_params: "--one-page-only --max-connections=3 --color=always"  # Check just one page

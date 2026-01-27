@@ -152,13 +152,15 @@ plugins:
   - autorefs
     # api automatics documentation 
   - mkdocstrings:
-      default_handler: python
       handlers:
         python:
           paths: [test-suite/test-suite] 
+          inventories:
+            - https://docs.python.org/3/objects.inv
           options:
             docstring_style: sphinx
             docstring_section_style: spacy
+            inherited_members: true
             show_source: false
   - gen-files:
       scripts:

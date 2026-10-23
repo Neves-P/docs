@@ -18,6 +18,9 @@
         
       
       
+        <link rel="alternate" type="application/rss+xml" title="RSS feed" href="../../../feed_rss_created.xml">
+        <link rel="alternate" type="application/rss+xml" title="RSS feed of updated content" href="../../../feed_rss_updated.xml">
+      
       <link rel="icon" href="../../../img/logos/EESSI.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
@@ -5740,7 +5743,34 @@
   <span class="md-ellipsis">
     
   
-    Systems where EESSI is available
+    Systems
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../ambassadors/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Ambassadors
   
 
     
@@ -5795,10 +5825,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
         
           
-          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
             
   
   
@@ -5816,8 +5846,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_13">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -6099,6 +6129,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#portable-test-run-of-espresso-on-eurohpc-systems-via-eessi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Portable test run of ESPResSo on EuroHPC systems via EESSI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eessi-promo-tour-isc24-may-2024-hamburg" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6144,6 +6185,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#portable-test-run-of-espresso-on-eurohpc-systems-via-eessi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Portable test run of ESPResSo on EuroHPC systems via EESSI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#eessi-promo-tour-isc24-may-2024-hamburg" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -6168,6 +6220,62 @@
       <header class="md-typeset">
         <h1 id="blog">Blog<a class="headerlink" href="#blog" title="Permanent link">&para;</a></h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+      <nav class="md-post__authors md-typeset">
+        
+          <span class="md-author">
+            <img src="https://avatars.githubusercontent.com/u/620876?v=4" alt="Kenneth Hoste">
+          </span>
+        
+      </nav>
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2024-06-28 00:00:00+00:00">June 28, 2024</time></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              6 min read
+            
+          </li>
+        
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="portable-test-run-of-espresso-on-eurohpc-systems-via-eessi"><a class="toclink" href="../../2024/06/28/espresso-portable-test-run-eurohpc/">Portable test run of ESPResSo on EuroHPC systems via EESSI</a></h2>
+<figure>
+<img alt="ESPResSo logo" src="../../2024/06/espresso.png" width="30%" />
+</figure>
+<p>Since 14 June 2024, <a href="https://espressomd.org">ESPResSo</a> v4.2.2 is available in the EESSI production repository <code>software.eessi.io</code>,
+optimized for the <a href="https://www.eessi.io/docs/software_layer/cpu_targets">8 CPU targets</a> that are fully supported by version 2023.06 of EESSI.
+This allows running ESPResSo effortlessly on the EuroHPC systems where EESSI is already available,
+like <a href="https://doc.vega.izum.si">Vega</a> and <a href="https://docs.it4i.cz/karolina/introduction">Karolina</a>.</p>
+<p>On 27 June 2024, an additional installation of ESPResSo v4.2.2 that is optimized for Arm A64FX processors
+was added, which enables also running ESPResSo efficiently on <a href="https://docs.deucalion.acnca.pt/deucalion/">Deucalion</a>,
+even though EESSI is not available yet system-wide on Deucalion (see below for more details).</p>
+<p>With the <a href="https://www.eessi.io/docs/test-suite/available-tests/#espresso">portable test for ESPResSo</a> that is available
+in the <a href="https://www.eessi.io/docs/test-suite">EESSI test suite</a> we can easily evaluate the scalability of
+ESPResSo across EuroHPC systems, even if those systems have different system architectures.</p>
+
+    
+      <nav class="md-post__action">
+        <a href="../../2024/06/28/espresso-portable-test-run-eurohpc/">
+          Continue reading
+        </a>
+      </nav>
+    
+    
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
@@ -6263,11 +6371,16 @@ This was an excellent opportunity for us to showcase <a href="https://eessi.io">
     
     
     
-      
-      
+    <a href="https://eessi.io/docs/feed_rss_created.xml" target="_blank" rel="noopener" title="RSS (XML)" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 64c0-17.7 14.3-32 32-32 229.8 0 416 186.2 416 416 0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96 14.3 96 0 81.7 0 64m0 352a64 64 0 1 1 128 0 64 64 0 1 1-128 0m32-256c159.1 0 288 128.9 288 288 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224-17.7 0-32-14.3-32-32s14.3-32 32-32"/></svg>
+    </a>
+  
     
-    <a href="https://twitter.com/eessi_hpc" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M459.4 151.7c.3 4.5.3 9.1.3 13.6 0 138.7-105.6 298.6-298.6 298.6-59.5 0-114.7-17.2-161.1-47.1 8.4 1 16.6 1.3 25.3 1.3 49.1 0 94.2-16.6 130.3-44.8-46.1-1-84.8-31.2-98.1-72.8 6.5 1 13 1.6 19.8 1.6 9.4 0 18.8-1.3 27.6-3.6-48.1-9.7-84.1-52-84.1-103v-1.3c14 7.8 30.2 12.7 47.4 13.3-28.3-18.8-46.8-51-46.8-87.4 0-19.5 5.2-37.4 14.3-53C87.4 130.8 165 172.4 252.1 176.9c-1.6-7.8-2.6-15.9-2.6-24C249.5 95.1 296.3 48 354.4 48c30.2 0 57.5 12.7 76.7 33.1 23.7-4.5 46.5-13.3 66.6-25.3-7.8 24.4-24.4 44.8-46.1 57.8 21.1-2.3 41.6-8.1 60.4-16.2-14.3 20.8-32.2 39.3-52.6 54.3"/></svg>
+    
+    
+    
+    <a href="https://eessi.io/docs/feed_json_created.json" target="_blank" rel="noopener" title="RSS (JSON)" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M0 64c0-17.7 14.3-32 32-32 229.8 0 416 186.2 416 416 0 17.7-14.3 32-32 32s-32-14.3-32-32C384 253.6 226.4 96 32 96 14.3 96 0 81.7 0 64m0 352a64 64 0 1 1 128 0 64 64 0 1 1-128 0m32-256c159.1 0 288 128.9 288 288 0 17.7-14.3 32-32 32s-32-14.3-32-32c0-123.7-100.3-224-224-224-17.7 0-32-14.3-32-32s14.3-32 32-32"/></svg>
     </a>
   
 </div>
